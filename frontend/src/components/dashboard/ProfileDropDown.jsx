@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Settings, LogOut, User } from 'lucide-react';
 
 export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -21,9 +24,17 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
     callback();
   };
 
+  const handleLogout = () => {
+    // Clear any stored tokens/auth data
+    localStorage.removeItem('token');
+    // Navigate to auth page
+    navigate('/');
+  };
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 hover:bg-gray-100 p-2 rounded-lg"
       >
@@ -38,6 +49,7 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
           </div>
           <div className="py-1">
             <button
+              type="button"
               onClick={() => handleItemClick(onProfileClick)}
               className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
             >
@@ -45,13 +57,18 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
               Profile
             </button>
             <button
+              type="button"
               onClick={() => handleItemClick(onSettingsClick)}
               className="w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
             >
               <Settings size={16} />
               Account Settings
             </button>
-            <button className="w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-50 flex items-center gap-2">
+            <button 
+              type="button"
+              onClick={() => handleItemClick(handleLogout)}
+              className="w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-50 flex items-center gap-2"
+            >
               <LogOut size={16} />
               Logout
             </button>
@@ -60,4 +77,10 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
       )}
     </div>
   );
+};
+
+ProfileDropdown.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  onSettingsClick: PropTypes.func.isRequired,
+  onProfileClick: PropTypes.func.isRequired,
 };

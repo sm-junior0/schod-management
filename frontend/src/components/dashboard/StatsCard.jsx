@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const StatsCard = ({ title, value, icon: Icon, color = 'text-gray-600' }) => {
+export const StatsCard = ({ title, value, change, icon }) => {
+  const isPositive = change >= 0;
+
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
-      <div
-        className={`p-4 rounded-full bg-opacity-20 ${color === 'text-blue-500' ? 'bg-blue-100' : 'bg-green-100'}`}
-      >
-        <Icon className={`w-6 h-6 ${color}`} />
+    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+      <div className="flex items-center justify-between mb-4">
+        <div className="p-2 bg-blue-50 rounded-lg">
+          {icon}
+        </div>
+        <span className={`text-sm font-medium ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
+          {isPositive ? '+' : ''}{change}%
+        </span>
       </div>
-      <div>
-        <h3 className="text-sm font-medium text-gray-500">{title}</h3>
-        <p className="text-xl font-semibold text-gray-800">{value}</p>
-      </div>
+      <h3 className="text-sm font-medium text-gray-600 mb-1">{title}</h3>
+      <p className="text-2xl font-semibold text-gray-800">{value}</p>
     </div>
   );
 };
@@ -20,6 +23,6 @@ export const StatsCard = ({ title, value, icon: Icon, color = 'text-gray-600' })
 StatsCard.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  icon: PropTypes.elementType.isRequired,
-  color: PropTypes.string,
+  change: PropTypes.number,
+  icon: PropTypes.element.isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { AuthPage } from './components/AuthPage';
 import { Sidebar } from './components/layout/Sidebar';
 import { Header } from './components/dashboard/Header';
@@ -46,32 +46,55 @@ const DashboardLayout = ({ children }) => (
   </div>
 );
 
-const Dashboard = () => (
-  <DashboardLayout>
-    <DashboardHome />
-  </DashboardLayout>
-);
+const ProtectedRoute = ({ children }) => {
+  // For now, we'll assume the user is always authenticated
+  const isAuthenticated = true;
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/" replace />;
+  }
 
-const Settings = () => (
-  <DashboardLayout>
-    <AccountSettings />
-  </DashboardLayout>
-);
+  return children;
+};
 
-const Profile = () => (
-  <DashboardLayout>
-    <ProfilePage />
-  </DashboardLayout>
-);
+
+const SettingsWrapper = () => {
+  const navigate = useNavigate();
+  return <AccountSettings onBack={() => navigate('/dashboard')} />;
+};
+
+const ProfileWrapper = () => {
+  const navigate = useNavigate();
+  return <ProfilePage onBack={() => navigate('/dashboard')} />;
+};
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<AuthPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+              <DashboardHome />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />
+        <Route path="/settings" element={
+          <ProtectedRoute>
+            
+              <SettingsWrapper />
+          
+          </ProtectedRoute>
+        } />
+        <Route path="/profile" element={
+          <ProtectedRoute>
+           
+              <ProfileWrapper />
+         
+          </ProtectedRoute>
+        } />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
