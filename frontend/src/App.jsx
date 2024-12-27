@@ -9,6 +9,7 @@ import { ClaimsChart } from './components/dashboard/ClaimsChart';
 import { SchoolsStats } from './components/dashboard/SchoolsStats';
 import { AccountSettings } from './components/settings/AccountSettings';
 import { ProfilePage } from './components/profile/ProfilePage';
+import LandingPage from './components/LandingPage';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -72,7 +73,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AuthPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={
           <ProtectedRoute>
             <DashboardLayout>
