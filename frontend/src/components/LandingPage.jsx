@@ -2,6 +2,24 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GraduationCap, Moon } from 'lucide-react';
 
+
+const testimonials = [
+    {
+      id: 1,
+      name: "Jane Niyonseng",
+      feedback: "The platform has made school management easy with streamlined attendance, financial tracking, and real-time reporting.",
+      position: "Principal at Kigali International School",
+      image: "path/to/jane-image.jpg", // Replace with actual image path
+    },
+    {
+      id: 2,
+      name: "Marie Uwase",
+      feedback: "I can track my child's progress and communicate with teachers easily, providing greater transparency in education.",
+      position: "Parent at International School of Rwanda",
+      image: "path/to/marie-image.jpg", // Replace with actual image path
+    },
+  ];
+
 const FeatureCard = ({ title, description, date, tag }) => (
   <div className="bg-white p-6 rounded-xl shadow-sm">
     <div className="text-sm text-blue-600 mb-2">{tag}</div>
@@ -66,7 +84,7 @@ export const LandingPage = () => {
           </div>
 
           <button
-            onClick={() => navigate('AuthPage')}
+            onClick={() => navigate('/AuthPage')}
             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
           >
             Get Started
@@ -147,6 +165,79 @@ export const LandingPage = () => {
         </div>
       </div>
 
+      {/* Pricing Section */}
+<div id="pricing" className="bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="p-6 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold text-blue-600 mb-4">Basic</h3>
+        <p className="text-gray-600 mb-6">Ideal for small schools and institutions.</p>
+        <div className="text-3xl font-bold text-gray-800 mb-6">$0 <span className="text-base text-gray-500">/month</span></div>
+        <ul className="space-y-2 mb-6 text-gray-600">
+          <li>Access to core features</li>
+          <li>Community support</li>
+          <li>Up to 100 users</li>
+        </ul>
+        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          Get Started
+        </button>
+      </div>
+      <div className="p-6 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold text-blue-600 mb-4">Standard</h3>
+        <p className="text-gray-600 mb-6">Best for growing institutions and schools.</p>
+        <div className="text-3xl font-bold text-gray-800 mb-6">$49 <span className="text-base text-gray-500">/month</span></div>
+        <ul className="space-y-2 mb-6 text-gray-600">
+          <li>All Basic features</li>
+          <li>Priority support</li>
+          <li>Up to 500 users</li>
+        </ul>
+        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          Get Started
+        </button>
+      </div>
+      <div className="p-6 bg-white rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold text-blue-600 mb-4">Premium</h3>
+        <p className="text-gray-600 mb-6">Designed for large schools and districts.</p>
+        <div className="text-3xl font-bold text-gray-800 mb-6">$99 <span className="text-base text-gray-500">/month</span></div>
+        <ul className="space-y-2 mb-6 text-gray-600">
+          <li>All Standard features</li>
+          <li>Dedicated support</li>
+          <li>Unlimited users</li>
+        </ul>
+        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Testimonials Section
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl font-bold mb-12 text-center">Don't just take our word for it</h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {testimonials.map((testimonial, index) => (
+        <div key={index} className="bg-gray-50 p-6 rounded-xl">
+          <p className="text-gray-700 mb-4">{testimonial.quote}</p>
+          <div className="flex items-center gap-4">
+            <img
+              src={testimonial.image}
+              alt={testimonial.author}
+              className="w-12 h-12 rounded-full"
+            />
+            <div>
+              <div className="font-medium">{testimonial.author}</div>
+              <div className="text-sm text-gray-600">{testimonial.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> */}
         
       {/* Footer */}
       <footer className="bg-navy-900 text-white py-12">

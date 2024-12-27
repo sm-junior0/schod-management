@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
 import 'tailwindcss/tailwind.css';
 import '../styles/global.css';
 
@@ -14,6 +13,12 @@ export const AuthPage = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  // Dummy credentials
+  const dummyData = {
+    studentCode: 'test',
+    password: '123',
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -22,22 +27,17 @@ export const AuthPage = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await api.post('/auth/login', {
-        studentCode: formData.studentCode,
-        password: formData.password,
-      });
-
-      // Handle success
-      localStorage.setItem('token', response.data.token);
+    if (
+      formData.studentCode === dummyData.studentCode &&
+      formData.password === dummyData.password
+    ) {
       setSuccess('Login successful!');
       setError('');
-      // Add navigation after successful login
       navigate('/dashboard');
-    } catch (err) {
+    } else {
       setError('Invalid student code or password');
       setSuccess('');
     }
