@@ -3,7 +3,7 @@ import { EmptyState } from './EmptyState';
 import { StudentsList } from './StudentsList';
 import { StudentDetails } from './StudentDetails';
 import { ClassManagement } from './ClassManagement';
-import { X } from 'lucide-react'; // Add this line
+import { X } from 'lucide-react'; 
 
 const mockStudents = [
   {
