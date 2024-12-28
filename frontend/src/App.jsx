@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { AuthPage } from './components/AuthPage';
-import { Sidebar } from './components/layout/Sidebar';
+import  Sidebar  from './components/layout/Sidebar';
 import { Header } from './components/dashboard/Header';
 import { StatsCard } from './components/dashboard/StatsCard';
 import { SchoolsTable } from './components/dashboard/SchoolsTable';
@@ -10,6 +10,7 @@ import { SchoolsStats } from './components/dashboard/SchoolsStats';
 import { AccountSettings } from './components/settings/AccountSettings';
 import { ProfilePage } from './components/profile/ProfilePage';
 import LandingPage from './components/LandingPage';
+import StudentsPage from './components/students/StudentsPage';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -75,6 +76,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/AuthPage" element={<AuthPage />} />
+        <Route path="/students" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+              <StudentsPage />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />
         <Route path="/dashboard" element={
           <ProtectedRoute>
             <DashboardLayout>

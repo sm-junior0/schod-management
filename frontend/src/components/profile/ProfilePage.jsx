@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar } from '../layout/Sidebar';
+import  Sidebar  from '../layout/Sidebar';
 import { Header } from '../dashboard/Header';
 import { ClaimsChart } from '../dashboard/ClaimsChart';
 import { SchoolsStats } from '../dashboard/SchoolsStats';
