@@ -11,6 +11,7 @@ import { AccountSettings } from './components/settings/AccountSettings';
 import { ProfilePage } from './components/profile/ProfilePage';
 import LandingPage from './components/LandingPage';
 import StudentsPage from './components/students/StudentsPage';
+import { ClassManagement } from './components/students/ClassManagement';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -76,6 +77,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/AuthPage" element={<AuthPage />} />
+       <Route path="dashboard/students/class" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <ClassManagement />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />  
         <Route path="/students" element={
           <ProtectedRoute>
             <DashboardLayout>
