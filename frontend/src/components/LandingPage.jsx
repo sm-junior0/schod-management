@@ -9,14 +9,14 @@ const testimonials = [
       name: "Jane Niyonseng",
       feedback: "The platform has made school management easy with streamlined attendance, financial tracking, and real-time reporting.",
       position: "Principal at Kigali International School",
-      image: "path/to/jane-image.jpg", // Replace with actual image path
+      image: "path/to/jane-image.jpg", 
     },
     {
       id: 2,
       name: "Marie Uwase",
       feedback: "I can track my child's progress and communicate with teachers easily, providing greater transparency in education.",
       position: "Parent at International School of Rwanda",
-      image: "path/to/marie-image.jpg", // Replace with actual image path
+      image: "path/to/marie-image.jpg",
     },
   ];
 
