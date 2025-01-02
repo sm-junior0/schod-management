@@ -13,6 +13,7 @@ import LandingPage from './components/LandingPage';
 import StudentsPage from './components/students/StudentsPage';
 import { ClassManagement } from './components/students/ClassManagement';
 import { TeachersPage } from './components/teachers/TeachersPage';
+import CoursesPage from './components/courses/CoursesPage';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -78,6 +79,15 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/AuthPage" element={<AuthPage />} />
+        
+        <Route path="dashboard/courses" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <CoursesPage />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } /> 
+
        <Route path="dashboard/students/class" element={
           <ProtectedRoute>
             <DashboardLayout>
