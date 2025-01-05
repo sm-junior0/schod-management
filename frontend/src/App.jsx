@@ -14,6 +14,12 @@ import StudentsPage from './components/students/StudentsPage';
 import { ClassManagement } from './components/students/ClassManagement';
 import { TeachersPage } from './components/teachers/TeachersPage';
 import CoursesPage from './components/courses/CoursesPage';
+import { StudentLogin } from './components/student/auth/StudentLogin';
+import { StudentLayout } from './components/student/layout/StudentLayout';
+import { StudentDashboard } from './components/student/dashboard/StudentDashboard';
+import { ReportCards } from './components/student/pages/ReportCards';
+import { ParentMeetings } from './components/student/pages/ParentMeetings';
+import { Announcements } from './components/student/dashboard/Announcements';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -79,6 +85,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/AuthPage" element={<AuthPage />} />
+        <Route path="/student/login" element={<StudentLogin />} />
+        <Route path="/student" element={<StudentLayout />}>
+        <Route path="dashboard" element={<StudentDashboard />} />
+        <Route path='announcements' element={<Announcements />} />
+        <Route path="report-cards" element={<ReportCards />} />
+        <Route path="parent-meetings" element={<ParentMeetings />} />
+      </Route>
         
         <Route path="dashboard/courses" element={
           <ProtectedRoute>
