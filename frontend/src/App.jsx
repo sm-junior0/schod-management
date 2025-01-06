@@ -20,6 +20,9 @@ import { StudentDashboard } from './components/student/dashboard/StudentDashboar
 import { ReportCards } from './components/student/pages/ReportCards';
 import { ParentMeetings } from './components/student/pages/ParentMeetings';
 import { Announcements } from './components/student/dashboard/Announcements';
+import { Appeals } from './components/student/pages/Appeals';
+import { Timetable } from './components/student/pages/Timetable';
+import { Performance } from './components/student/pages/Perfomance';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
 
 const DashboardHome = () => (
@@ -91,6 +94,9 @@ const App = () => {
         <Route path='announcements' element={<Announcements />} />
         <Route path="report-cards" element={<ReportCards />} />
         <Route path="parent-meetings" element={<ParentMeetings />} />
+        <Route path="appeals" element={<Appeals />} />
+        <Route path="performance" element={<Performance />} />
+        <Route path='timetable' element={<Timetable />} />
       </Route>
         
         <Route path="dashboard/courses" element={
