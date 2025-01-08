@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import 'tailwindcss/tailwind.css';
-import '../styles/global.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "tailwindcss/tailwind.css";
+import "../styles/global.css";
 
 export const AuthPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    studentCode: '',
-    password: ''
+    studentCode: "",
+    password: "",
   });
   const [rememberMe, setRememberMe] = useState(false);
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   // Dummy credentials
   const dummyData = {
-    studentCode: 'test',
-    password: '123',
+    studentCode: "test",
+    password: "123",
   };
 
   const handleChange = (e) => {
@@ -34,12 +34,12 @@ export const AuthPage = () => {
       formData.studentCode === dummyData.studentCode &&
       formData.password === dummyData.password
     ) {
-      setSuccess('Login successful!');
-      setError('');
-      navigate('/dashboard');
+      setSuccess("Login successful!");
+      setError("");
+      navigate("/dashboard");
     } else {
-      setError('Invalid student code or password');
-      setSuccess('');
+      setError("Invalid student code or password");
+      setSuccess("");
     }
   };
 
