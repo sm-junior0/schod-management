@@ -8,9 +8,10 @@ import {
   Calendar,
   TrendingUp,
   MessageSquare,
-  Settings
+  Settings,
 } from 'lucide-react';
 import { Logo } from '../../layout/Logo';
+import { Notifications } from '../pages/Notification';
 
 const navItems = [
   {
@@ -47,6 +48,11 @@ const navItems = [
     icon: <Users size={20} />,
     label: 'Parent Meetings',
     path: '/student/parent-meetings'
+  },
+  { 
+    icon: <Bell size={20} />,
+    label: 'Notifications',
+    path: '/student/notifications'
   }
 ];
 
