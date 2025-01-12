@@ -44,7 +44,7 @@ const SidebarItem = ({
   </div>
 );
 
-const Sidebar = ({ onLogoClick }) => {
+const Sidebar = ({ onLogoClick = () => {} }) => {
   const navigate = useNavigate();
   const [isStudentsOpen, setIsStudentsOpen] = useState(false);
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import  Sidebar  from '../layout/Sidebar';
+import Sidebar from '../layout/Sidebar';
 import { Header } from '../dashboard/Header';
 
 interface AccountSettingsProps {
@@ -9,7 +9,7 @@ interface AccountSettingsProps {
 export const AccountSettings: React.FC<AccountSettingsProps> = ({ onBack }) => {
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar onLogoClick={onBack} />
+      <Sidebar />
       
       <div className="flex-1">
         <Header 

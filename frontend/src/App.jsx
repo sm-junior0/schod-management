@@ -35,6 +35,7 @@ import { SaProfileDropdown } from './components/super_admin/dashboard/SaProfileD
 import { SaProfilePage } from './components/super_admin/profile/SaProfilePage';
 import { SaAccountSettings } from './components/super_admin/settings/SaAccountSettings';
 import { School, Users, DollarSign, UserCircle } from 'lucide-react';
+import { AdminDashboard } from './components/dashboard/AdminDashboard';
 
 const DashboardHome = () => (
   <div className="p-6">
@@ -226,7 +227,7 @@ const App = () => {
         <Route path="/dashboard" element={
           <ProtectedRoute>
             <DashboardLayout>
-              <DashboardHome />
+              <AdminDashboard />
             </DashboardLayout>
           </ProtectedRoute>
         } />

@@ -12,6 +12,7 @@ export const AuthPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [activeRole, setActiveRole] = useState("admin"); // Active role state
 
   // Dummy credentials
   const dummyData = {
@@ -43,6 +44,22 @@ export const AuthPage = () => {
     }
   };
 
+  const handleRoleNavigation = (role) => {
+    setActiveRole(role);
+    switch (role) {
+      case "student":
+        navigate("/student/login");
+        break;
+      case "sadmin":
+        navigate("/sadmin/auth");
+        break;
+      case "admin":
+      default:
+        navigate("/dashboard");
+        break;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 font-sans">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
@@ -52,6 +69,26 @@ export const AuthPage = () => {
         <p className="text-center text-gray-600 text-sm mb-6">
           Please enter your details below to access your account.
         </p>
+
+        <div className="flex justify-center space-x-4 mb-6">
+          {[
+            { role: "admin", label: "Admin" },
+            { role: "sadmin", label: "Super Admin" },
+            { role: "student", label: "Student" },
+          ].map(({ role, label }) => (
+            <button
+              key={role}
+              onClick={() => handleRoleNavigation(role)}
+              className={`p-4 rounded-full w-24 text-center transition-all ${
+                activeRole === role
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
         {success && <p className="text-green-500 text-sm mb-4">{success}</p>}
