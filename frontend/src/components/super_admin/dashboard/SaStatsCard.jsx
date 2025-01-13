@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const SaStatsCard = ({ title, value, change, icon }) => {
   const isPositive = change >= 0;
@@ -7,11 +7,14 @@ export const SaStatsCard = ({ title, value, change, icon }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
       <div className="flex items-center justify-between mb-4">
-        <div className="p-2 bg-blue-50 rounded-lg">
-          {icon}
-        </div>
-        <span className={`text-sm font-medium ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
-          {isPositive ? '+' : ''}{change}%
+        <div className="p-2 bg-blue-50 rounded-lg">{icon}</div>
+        <span
+          className={`text-sm font-medium ${
+            isPositive ? "text-green-600" : "text-red-600"
+          }`}
+        >
+          {isPositive ? "+" : ""}
+          {change}%
         </span>
       </div>
       <h3 className="text-sm font-medium text-gray-600 mb-1">{title}</h3>
