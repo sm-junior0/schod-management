@@ -84,5 +84,3 @@ SaProfileDropdown.propTypes = {
   onSettingsClick: PropTypes.func.isRequired,
   onProfileClick: PropTypes.func.isRequired,
 };  
-
-
