@@ -10,6 +10,8 @@ import { SchoolsStats } from './components/dashboard/SchoolsStats';
 import { AccountSettings } from './components/settings/AccountSettings';
 import { ProfilePage } from './components/profile/ProfilePage';
 import Messaging from './components/messageComponents/messaging';
+import { AcademicTerm } from './components/academic/AcademicTerm';
+import { AcademicYear } from './components/academic/AcademicYear';
 import LandingPage from './components/LandingPage';
 import StudentsPage from './components/students/StudentsPage';
 import { ClassManagement } from './components/students/ClassManagement';
@@ -215,6 +217,27 @@ const App = () => {
           <ProtectedRoute>
             <DashboardLayout>
               <StudentsPage />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />
+              <Route path="/dashboard/academic-year" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <AcademicYear />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />
+                 <Route path="/dashboard/academic-term" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <AcademicTerm />
+            </DashboardLayout>
+          </ProtectedRoute>
+        } />
+              <Route path="dashboard/students/class" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <ClassManagement />
             </DashboardLayout>
           </ProtectedRoute>
         } />

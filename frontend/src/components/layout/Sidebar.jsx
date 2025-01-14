@@ -9,7 +9,8 @@ import {
   BookOpen,
   Settings,
   ChevronDown,
-  MessageSquare
+  MessageSquare,
+  Calendar
 } from 'lucide-react';
 import { Logo } from './Logo';
 
@@ -48,7 +49,8 @@ const SidebarItem = ({
 const Sidebar = ({ onLogoClick = () => {} }) => {
   const navigate = useNavigate();
   const [isStudentsOpen, setIsStudentsOpen] = useState(false);
-
+  const [isAcademicOpen, setIsAcademicOpen] = useState(false);
+  const [activeItem,setActiveItem] = useState('');
   return (
     <div className="w-64 bg-blue-600 min-h-screen p-4 flex flex-col">
       <Logo onClick={onLogoClick} />
@@ -102,6 +104,37 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
           label="Teachers" 
           onClick={() => navigate('/dashboard/teachers')} 
         />
+          <SidebarItem 
+          icon={<Calendar size={20} />} 
+          label="Academic" 
+          hasDropdown 
+          isOpen={isAcademicOpen} 
+          onClick={() => setIsAcademicOpen(!isAcademicOpen)}
+        >
+          <div 
+            className={`text-white/70 hover:bg-white/5 py-2 px-4 rounded-lg cursor-pointer text-sm ${
+              activeItem === 'academic-year' ? 'bg-white/10' : ''
+            }`}
+            onClick={() => {
+              setActiveItem('academic-year');
+              navigate('/dashboard/academic-year');
+            }}
+          >
+            Academic Year
+          </div>
+          <div 
+            className={`text-white/70 hover:bg-white/5 py-2 px-4 rounded-lg cursor-pointer text-sm ${
+              activeItem === 'academic-term' ? 'bg-white/10' : ''
+            }`}
+            onClick={() => {
+              setActiveItem('academic-term');
+              navigate('/dashboard/academic-term');
+            }}
+          >
+            Academic Term
+          </div>
+        </SidebarItem>
+
         <SidebarItem 
           icon={<CreditCard size={20} />} 
           label="Payment" 
