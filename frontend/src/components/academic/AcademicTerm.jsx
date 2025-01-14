@@ -2,15 +2,33 @@ import React, { useState } from "react";
 import { PencilIcon, Plus, X } from "lucide-react";
 
 const academicTerms = [
-  { id: 1, name: "First Term", academicYear: "2021-2022", start: "September 2021", end: "December 2021" },
-  { id: 2, name: "Second Term", academicYear: "2021-2022", start: "January 2022", end: "March 2022" },
-  { id: 3, name: "Third Term", academicYear: "2021-2022", start: "April 2022", end: "June 2022" },
+  {
+    id: 1,
+    name: "First Term",
+    academicYear: "2021-2022",
+    start: "September 2021",
+    end: "December 2021",
+  },
+  {
+    id: 2,
+    name: "Second Term",
+    academicYear: "2021-2022",
+    start: "January 2022",
+    end: "March 2022",
+  },
+  {
+    id: 3,
+    name: "Third Term",
+    academicYear: "2021-2022",
+    start: "April 2022",
+    end: "June 2022",
+  },
 ];
 
 export const AcademicTerm = () => {
   const [selectedTerm, setSelectedTerm] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [dialogMode, setDialogMode] = useState("create"); // create or edit
+  const [dialogMode, setDialogMode] = useState("create"); 
 
   const handleDialogClose = () => {
     setIsDialogOpen(false);
@@ -42,21 +60,39 @@ export const AcademicTerm = () => {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">#</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Academic Year</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Start</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">End</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Edit</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                #
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                Name
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                Academic Year
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                Start
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                End
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                Edit
+              </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {academicTerms.map((term) => (
               <tr key={term.id} className="hover:bg-gray-50">
-                <td className="px-6 py-4 text-sm font-medium text-gray-900">{term.id}</td>
+                <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                  {term.id}
+                </td>
                 <td className="px-6 py-4 text-sm text-gray-500">{term.name}</td>
-                <td className="px-6 py-4 text-sm text-gray-500">{term.academicYear}</td>
-                <td className="px-6 py-4 text-sm text-gray-500">{term.start}</td>
+                <td className="px-6 py-4 text-sm text-gray-500">
+                  {term.academicYear}
+                </td>
+                <td className="px-6 py-4 text-sm text-gray-500">
+                  {term.start}
+                </td>
                 <td className="px-6 py-4 text-sm text-gray-500">{term.end}</td>
                 <td className="px-6 py-4 text-right text-sm">
                   <button
@@ -81,7 +117,9 @@ export const AcademicTerm = () => {
           <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-md p-6">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold">
-                {dialogMode === "create" ? "Create Academic Term" : "Edit Academic Term"}
+                {dialogMode === "create"
+                  ? "Create Academic Term"
+                  : "Edit Academic Term"}
               </h2>
               <button
                 onClick={handleDialogClose}
@@ -92,9 +130,13 @@ export const AcademicTerm = () => {
             </div>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Academic Year</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Academic Year
+                </label>
                 <select
-                  defaultValue={dialogMode === "edit" ? selectedTerm.academicYear : ""}
+                  defaultValue={
+                    dialogMode === "edit" ? selectedTerm.academicYear : ""
+                  }
                   className="w-full p-2 border border-gray-200 rounded focus:border-blue-500 focus:ring-blue-500"
                 >
                   <option value="">Select academic year</option>
@@ -103,7 +145,9 @@ export const AcademicTerm = () => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Term Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Term Name
+                </label>
                 <input
                   type="text"
                   defaultValue={dialogMode === "edit" ? selectedTerm.name : ""}
@@ -112,18 +156,28 @@ export const AcademicTerm = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Start Time</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Start Time
+                </label>
                 <input
                   type="month"
-                  defaultValue={dialogMode === "edit" ? selectedTerm.start.split(" ")[0] : ""}
+                  defaultValue={
+                    dialogMode === "edit"
+                      ? selectedTerm.start.split(" ")[0]
+                      : ""
+                  }
                   className="w-full p-2 border border-gray-200 rounded focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">End Time</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  End Time
+                </label>
                 <input
                   type="month"
-                  defaultValue={dialogMode === "edit" ? selectedTerm.end.split(" ")[0] : ""}
+                  defaultValue={
+                    dialogMode === "edit" ? selectedTerm.end.split(" ")[0] : ""
+                  }
                   className="w-full p-2 border border-gray-200 rounded focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>

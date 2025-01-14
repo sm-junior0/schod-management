@@ -10,7 +10,7 @@ const academicYears = [
 export const AcademicYear = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [dialogMode, setDialogMode] = useState("create"); 
+  const [dialogMode, setDialogMode] = useState("create");
 
   const handleDialogClose = () => {
     setIsDialogOpen(false);
@@ -66,7 +66,9 @@ export const AcademicYear = () => {
                   {year.id}
                 </td>
                 <td className="px-6 py-4 text-sm text-gray-500">{year.name}</td>
-                <td className="px-6 py-4 text-sm text-gray-500">{year.start}</td>
+                <td className="px-6 py-4 text-sm text-gray-500">
+                  {year.start}
+                </td>
                 <td className="px-6 py-4 text-sm text-gray-500">{year.end}</td>
                 <td className="px-6 py-4 text-right text-sm">
                   <button
