@@ -9,6 +9,7 @@ import { ClaimsChart } from './components/dashboard/ClaimsChart';
 import { SchoolsStats } from './components/dashboard/SchoolsStats';
 import { AccountSettings } from './components/settings/AccountSettings';
 import { ProfilePage } from './components/profile/ProfilePage';
+import Messaging from './components/messageComponents/messaging';
 import LandingPage from './components/LandingPage';
 import StudentsPage from './components/students/StudentsPage';
 import { ClassManagement } from './components/students/ClassManagement';
@@ -231,6 +232,13 @@ const App = () => {
             </DashboardLayout>
           </ProtectedRoute>
         } />
+        <Route path="/dashboard/messages" element={
+          <ProtectedRoute>
+            <DashboardLayout>
+             <Messaging/>
+            </DashboardLayout>
+          </ProtectedRoute>
+        } /> 
         <Route path="/settings" element={
           <ProtectedRoute>
             

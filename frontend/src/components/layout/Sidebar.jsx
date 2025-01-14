@@ -8,7 +8,8 @@ import {
   CreditCard,
   BookOpen,
   Settings,
-  ChevronDown
+  ChevronDown,
+  MessageSquare
 } from 'lucide-react';
 import { Logo } from './Logo';
 
@@ -63,7 +64,7 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
           icon={<School size={20} />} 
           label="Schools" 
           onClick={() => navigate('/dashboard/schools')} 
-        />
+        />  
         <SidebarItem 
           icon={<Users size={20} />} 
           label="Students" 
@@ -110,6 +111,11 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
           icon={<BookOpen size={20} />} 
           label="Courses" 
           onClick={() => navigate('/dashboard/courses')} 
+        />
+        <SidebarItem 
+          icon={<MessageSquare size={20} />} 
+          label="Messages" 
+          onClick={() => navigate('/dashboard/messages')} 
         />
         <SidebarItem 
           icon={<Settings size={20} />} 

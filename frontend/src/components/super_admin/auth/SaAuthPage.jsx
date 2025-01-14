@@ -25,7 +25,7 @@ export const SaAuthPage = () => {
           <GraduationCap className="text-blue-600" size={48} />
         </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Admin Login
+          SuperAdmin Login
         </h2>
       </div>
 

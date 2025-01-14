@@ -64,7 +64,7 @@ const mockTeachers = [
         {
           name: "Theresa Webb",
           subject: "Psychology",
-          class: "JSS 3",
+          class: "JSS 3", 
           email: "debra.holt@example.com",
           gender: "Female",
           avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=faces&fit=crop&w=96&h=96"
