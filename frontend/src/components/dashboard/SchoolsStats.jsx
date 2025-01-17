@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const SchoolsStats = () => {
   return (
@@ -10,7 +10,7 @@ export const SchoolsStats = () => {
         </div>
         <span className="text-2xl font-bold">120</span>
       </div>
-      
+
       <div className="mb-4">
         <div className="flex justify-between text-sm mb-1">
           <span>Schools in total</span>

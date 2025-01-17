@@ -12,7 +12,7 @@ export const AuthPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [activeRole, setActiveRole] = useState("admin"); // Active role state
+  const [activeRole, setActiveRole] = useState("admin"); 
 
   // Dummy credentials
   const dummyData = {

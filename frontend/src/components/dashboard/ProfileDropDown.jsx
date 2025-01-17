@@ -1,9 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { Settings, LogOut, User } from 'lucide-react';
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Settings, LogOut, User } from "lucide-react";
 
-export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) => {
+export const ProfileDropdown = ({
+  imageUrl,
+  onSettingsClick,
+  onProfileClick,
+}) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -15,8 +19,8 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleItemClick = (callback) => {
@@ -26,9 +30,9 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
 
   const handleLogout = () => {
     // Clear any stored tokens/auth data
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     // Navigate to auth page
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -64,7 +68,7 @@ export const ProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) =
               <Settings size={16} />
               Account Settings
             </button>
-            <button 
+            <button
               type="button"
               onClick={() => handleItemClick(handleLogout)}
               className="w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-50 flex items-center gap-2"
