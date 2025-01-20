@@ -11,7 +11,7 @@ import {
   Settings,
 } from 'lucide-react';
 import { Logo } from '../../layout/Logo';
-import { Notifications } from '../pages/Notification';
+
 
 const navItems = [
   {
