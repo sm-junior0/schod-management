@@ -1,5 +1,5 @@
-import React from 'react';
-import { Pencil, Trash2 } from 'lucide-react';
+import React from "react";
+import { Pencil, Trash2 } from "lucide-react";
 
 export const LessonTableRow = ({ lesson, index, onEdit, onDelete }) => (
   <tr className="hover:bg-gray-50">

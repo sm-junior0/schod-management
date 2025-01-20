@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { LessonsList } from './LessonsList';
-import { CreateLessonModal } from './modals/CreateLessonModal';
-import { EditLessonModal } from './modals/EditLessonModal';
-import { DeleteLessonModal } from './modals/DeleteLessonModal';
-import { mockLessons } from './data/mockData';
+import React, { useState } from "react";
+import { LessonsList } from "./LessonsList";
+import { CreateLessonModal } from "./modals/CreateLessonModal";
+import { EditLessonModal } from "./modals/EditLessonModal";
+import { DeleteLessonModal } from "./modals/DeleteLessonModal";
+import { mockLessons } from "./data/mockData";
 
 export const CoursesPage = () => {
   const [lessons, setLessons] = useState(mockLessons);
@@ -18,13 +18,15 @@ export const CoursesPage = () => {
   };
 
   const handleEditLesson = (updatedLesson) => {
-    setLessons(lessons.map(l => (l.id === updatedLesson.id ? updatedLesson : l)));
+    setLessons(
+      lessons.map((l) => (l.id === updatedLesson.id ? updatedLesson : l))
+    );
     setShowEditModal(false);
     setSelectedLesson(null);
   };
 
   const handleDeleteLesson = (lessonId) => {
-    setLessons(lessons.filter(l => l.id !== lessonId));
+    setLessons(lessons.filter((l) => l.id !== lessonId));
     setShowDeleteModal(false);
     setSelectedLesson(null);
   };
