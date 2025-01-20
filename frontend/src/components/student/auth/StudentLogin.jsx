@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { GraduationCap } from 'lucide-react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { GraduationCap } from "lucide-react";
 
 export const StudentLogin = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
     //Demo login
-    if (email === 'student@school.com' && password === 'student123') {
-      navigate('/student/dashboard');
+    if (email === "student@school.com" && password === "student123") {
+      navigate("/student/dashboard");
     } else {
-      setError('Invalid student credentials');
+      setError("Invalid student credentials");
     }
   };
 
@@ -39,7 +39,10 @@ export const StudentLogin = () => {
             )}
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Student Email
               </label>
               <input
@@ -53,7 +56,10 @@ export const StudentLogin = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Password
               </label>
               <input
@@ -73,7 +79,10 @@ export const StudentLogin = () => {
                   type="checkbox"
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                 />
-                <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
+                <label
+                  htmlFor="remember_me"
+                  className="ml-2 block text-sm text-gray-900"
+                >
                   Remember me
                 </label>
               </div>
@@ -81,7 +90,7 @@ export const StudentLogin = () => {
               <div className="text-sm">
                 <button
                   type="button"
-                  onClick={() => navigate('/student/reset-password')}
+                  onClick={() => navigate("/student/reset-password")}
                   className="font-medium text-blue-600 hover:text-blue-500"
                 >
                   Forgot password?
