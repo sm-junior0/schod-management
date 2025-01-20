@@ -21,13 +21,13 @@ const navItems = [
   },
   {
     icon: <FileText size={20} />,
-    label: 'Report Cards',
-    path: '/teacher/report-cards'
+    label: 'classes',
+    path: '/teacher/classes'
   },
   {
     icon: <Calendar size={20} />,
-    label: 'Timetable',
-    path: '/teacher/timetable'
+    label: 'Appeals',
+    path: '/teacher/appeals'
   },
   {
     icon: <TrendingUp size={20} />,

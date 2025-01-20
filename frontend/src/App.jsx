@@ -46,6 +46,7 @@ import { SaAccountSettings } from "./components/super_admin/settings/SaAccountSe
 import { TeacherLogin } from "./components/teacher/auth/TeacherLogin";
 import { TeacherSidebar } from "./components/teacher/layout/TeacherSidebar";
 import { AppealsTeacher } from "./components/teacher/pages/AppealsTeacher";
+import { TeacherLayout } from "./components/teacher/layout/TeacherLayout";
 import { Classes } from "./components/teacher/pages/Classes";
 import { School, Users, DollarSign, UserCircle } from "lucide-react";
 import { AdminDashboard } from "./components/dashboard/AdminDashboard";
@@ -224,8 +225,11 @@ const App = () => {
           <Route path="notifications" element={<Notifications />} />
         </Route>
         <Route>
-          <Route path="/teacherLogin" element={<TeacherLogin />} />
-          
+          <Route path="/teacher/teacherLogin" element={<TeacherLogin />} />
+          <Route path="/teacher" element={<TeacherLayout />}>
+             <Route path="classes" element={<Classes />} />
+             <Route path="appeals" element={<AppealsTeacher />} />
+          </Route>
         </Route>
         <Route>
           <Route path="/" element={<LandingPage />} />
