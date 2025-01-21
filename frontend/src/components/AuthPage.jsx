@@ -50,6 +50,9 @@ export const AuthPage = () => {
       case "student":
         navigate("/student/login");
         break;
+      case "Teacher":
+          navigate("/teacher/teacherLogin");
+        break;
       case "sadmin":
         navigate("/sadmin/auth");
         break;
@@ -57,6 +60,7 @@ export const AuthPage = () => {
       default:
         navigate("/dashboard");
         break;
+      
     }
   };
 
@@ -75,6 +79,7 @@ export const AuthPage = () => {
             { role: "admin", label: "Admin" },
             { role: "sadmin", label: "Super Admin" },
             { role: "student", label: "Student" },
+            { role: "Teacher", label: "Teacher" },
           ].map(({ role, label }) => (
             <button
               key={role}
