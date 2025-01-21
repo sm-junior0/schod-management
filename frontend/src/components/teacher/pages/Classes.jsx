@@ -15,6 +15,48 @@ const students = [
     email: 'peaceamizero@gmail.com',
     marks: { term1: 30, term2: 30, term3: 30 },
   },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
+  {
+    id: 1,
+    name: 'Burigo Jabes',
+    email: 'peaceamizero@gmail.com',
+    marks: { term1: 30, term2: 30, term3: 30 },
+  },
 ];
 
 export const Classes = () => {
