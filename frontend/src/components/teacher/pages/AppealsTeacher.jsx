@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const appeals = [
-  { id: '04323', studentName: 'Ntagungira Ali Rashid', status: 'Pending' },
-  { id: '04323', studentName: 'Ntagungira Ali Rashid', status: 'Pending' },
-  { id: '04323', studentName: 'Ntagungira Ali Rashid', status: 'Pending' },
-  { id: '04323', studentName: 'Ntagungira Ali Rashid', status: 'Pending' },
-  { id: '04323', studentName: 'Ntagungira Ali Rashid', status: 'Pending' },
+  { id: "04323", studentName: "Ntagungira Ali Rashid", status: "Pending" },
+  { id: "04323", studentName: "Ntagungira Ali Rashid", status: "Pending" },
+  { id: "04323", studentName: "Ntagungira Ali Rashid", status: "Pending" },
+  { id: "04323", studentName: "Ntagungira Ali Rashid", status: "Pending" },
+  { id: "04323", studentName: "Ntagungira Ali Rashid", status: "Pending" },
 ];
 
 export const AppealsTeacher = () => {
@@ -18,11 +18,18 @@ export const AppealsTeacher = () => {
       <div className="bg-white p-6 rounded-lg w-[500px]">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold">Appeal Description</h3>
-          <button onClick={() => setShowAppealModal(false)} className="text-gray-500">×</button>
+          <button
+            onClick={() => setShowAppealModal(false)}
+            className="text-gray-500"
+          >
+            ×
+          </button>
         </div>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-600">Student's Name</label>
+            <label className="block text-sm text-gray-600">
+              Student's Name
+            </label>
             <input
               type="text"
               value="Java"
@@ -40,7 +47,9 @@ export const AppealsTeacher = () => {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600">Reason for appeal</label>
+            <label className="block text-sm text-gray-600">
+              Reason for appeal
+            </label>
             <textarea
               disabled
               className="w-full p-2 bg-gray-100 rounded h-24"
@@ -83,11 +92,11 @@ export const AppealsTeacher = () => {
         </div>
 
         <div className="flex space-x-2 mb-6">
-          {['All', 'Pending', 'Approved', 'Rejected'].map((status) => (
+          {["All", "Pending", "Approved", "Rejected"].map((status) => (
             <button
               key={status}
               className={`px-4 py-2 rounded ${
-                status === 'Pending' ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                status === "Pending" ? "bg-blue-500 text-white" : "bg-gray-100"
               }`}
             >
               {status}

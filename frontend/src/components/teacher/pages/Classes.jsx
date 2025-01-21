@@ -1,67 +1,67 @@
-import React, { useState } from 'react';
-import { Download, Upload } from 'lucide-react';
+import React, { useState } from "react";
+import { Download, Upload } from "lucide-react";
 
 const classes = [
-  { id: 'year1', name: 'Year 1', color: 'bg-blue-500' },
-  { id: 'year2', name: 'Year 2', color: 'bg-purple-100' },
-  { id: 'year3', name: 'Year 3', color: 'bg-blue-500' },
-  { id: 'unclassified', name: 'Unclassified', color: 'bg-purple-100' },
+  { id: "year1", name: "Year 1", color: "bg-blue-500" },
+  { id: "year2", name: "Year 2", color: "bg-purple-100" },
+  { id: "year3", name: "Year 3", color: "bg-blue-500" },
+  { id: "unclassified", name: "Unclassified", color: "bg-purple-100" },
 ];
 
 const students = [
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
   {
     id: 1,
-    name: 'Burigo Jabes',
-    email: 'peaceamizero@gmail.com',
+    name: "Burigo Jabes",
+    email: "peaceamizero@gmail.com",
     marks: { term1: 30, term2: 30, term3: 30 },
   },
 ];
 
 export const Classes = () => {
-  const [selectedClass, setSelectedClass] = useState('');
-  const [selectedSection, setSelectedSection] = useState('A');
+  const [selectedClass, setSelectedClass] = useState("");
+  const [selectedSection, setSelectedSection] = useState("A");
   const [showDeductModal, setShowDeductModal] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState(null);
 
@@ -70,13 +70,18 @@ export const Classes = () => {
       <div className="bg-white p-6 rounded-lg w-96">
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg font-semibold">Edit Deducted Marks</h3>
-          <button onClick={() => setShowDeductModal(false)} className="text-gray-500">
+          <button
+            onClick={() => setShowDeductModal(false)}
+            className="text-gray-500"
+          >
             ×
           </button>
         </div>
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-600">Student's Name</label>
+            <label className="block text-sm text-gray-600">
+              Student's Name
+            </label>
             <input
               type="text"
               value="Niyonsenga Valens"
@@ -85,7 +90,9 @@ export const Classes = () => {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600">Deducted Marks</label>
+            <label className="block text-sm text-gray-600">
+              Deducted Marks
+            </label>
             <input
               type="number"
               defaultValue={4}
@@ -116,7 +123,7 @@ export const Classes = () => {
             key={cls.id}
             onClick={() => setSelectedClass(cls.id)}
             className={`${cls.color} p-6 rounded-lg text-center ${
-              selectedClass === cls.id ? 'ring-2 ring-blue-600' : ''
+              selectedClass === cls.id ? "ring-2 ring-blue-600" : ""
             }`}
           >
             {cls.name}
@@ -128,14 +135,14 @@ export const Classes = () => {
         <div className="bg-white rounded-lg shadow p-6">
           <div className="flex justify-between items-center mb-6">
             <div className="flex space-x-2">
-              {['A', 'B', 'C', 'D'].map((section) => (
+              {["A", "B", "C", "D"].map((section) => (
                 <button
                   key={section}
                   onClick={() => setSelectedSection(section)}
                   className={`px-4 py-2 rounded ${
                     selectedSection === section
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-100'
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-100"
                   }`}
                 >
                   {section}
