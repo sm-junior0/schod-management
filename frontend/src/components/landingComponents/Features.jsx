@@ -5,32 +5,56 @@ import {
 import phoneImage from '../../assets/images/phone.png';
 const features = [
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon: (
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Student Management',
     description: 'Easily manage student profiles, attendance, grades, and progress reports.',
   },
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon: (
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Teacher Tools',
     description: 'Enable teachers to assign homework, track performance, and streamline grading.',
   },
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon: (
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Parent Portal',
     description: 'Keep parents informed with updates on their child\'s attendance, grades, and school activities.',
   },
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon: (
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Parent PoTimetable Automation',
     description: 'Automatically generate timetables to save time and reduce errors.',
   },
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon: (
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Fee Management',
     description: 'Simplify fee collection with automated reminders and secure online payment options.',
   },
   {
-    icon: <Circle className="w-6 h-6 text-primary" />,
+    icon:(
+      <div className="flex items-center justify-center w-5 h-5 mt-1">
+        <Circle className="text-primary" />
+      </div>
+    ),
     title: 'Fast, Secure & Easy',
     description: 'We use advanced tools and technologies to build up this free school software. It is super fast, secure, reliable, and easy to use and manage.',
   },
