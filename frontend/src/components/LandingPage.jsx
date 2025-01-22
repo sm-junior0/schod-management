@@ -109,47 +109,63 @@ function LandingPage() {
           <h2 className="text-center text-2xl font-semibold mb-12">
             30K+ Schools use our product
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
-            <img
-              src="https://shorturl.at/UZJlV"
-              alt="Vant Garde"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://shorturl.at/xLwII"
-              alt="Lily's Flowers"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://shorturl.at/1e1qH"
-              alt="Cara Indoors"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://shorturl.at/yxb1u"
-              alt="Business"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://shorturl.at/PgfgM"
-              alt="Some Business"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://shorturl.at/1e1qH"
-              alt="Cara Indoors"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://tinyurl.com/nm6jz26d"
-              alt="Leaves & co."
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
-            <img
-              src="https://tinyurl.com/msvtypv3"
-              alt="Sushi Express"
-              className="h-16 object-contain grayscale hover:grayscale-0 transition-all"
-            />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 items-center">
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/UZJlV"
+                alt="Vant Garde"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/xLwII"
+                alt="Lily's Flowers"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/1e1qH"
+                alt="Cara Indoors"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/yxb1u"
+                alt="Business"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/PgfgM"
+                alt="Some Business"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://shorturl.at/1e1qH"
+                alt="Cara Indoors"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://tinyurl.com/nm6jz26d"
+                alt="Leaves & co."
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
+            <div className="border border-gray-300 p-4 rounded-lg"> {/* Increased padding for a larger box */}
+              <img
+                src="https://tinyurl.com/msvtypv3"
+                alt="Sushi Express"
+                className="h-12 object-contain transition-all hover:scale-105" // Removed grayscale for less dark effect
+              />
+            </div>
           </div>
         </div>
       </div>
