@@ -152,7 +152,7 @@ export const AuthPage = () => {
               onClick={() => navigate("/")}
               className="font-medium text-blue-600 hover:text-blue-500"
             >
-              Home
+              Back Home
             </button>
           </div>
         </form>
