@@ -11,8 +11,8 @@ export const TeacherLogin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     //Demo login
-    if (email === "teacher@gmail.com" && password === "teacher") {
-      navigate("/teacher/dashboard");
+    if (email === "teacher@school.com" && password === "teacher") {
+      navigate("/teacher/classes");
     } else {
       setError("Invalid student credentials");
     }
