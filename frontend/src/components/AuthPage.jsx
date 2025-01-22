@@ -146,6 +146,15 @@ export const AuthPage = () => {
           >
             LOGIN
           </button>
+          <div mt-4 className="text-center">
+              <button
+                type="button"
+                onClick={() => navigate("/")}
+                className="font-medium text-blue-600 hover:text-blue-500"
+              >
+                Home
+              </button>
+            </div>
         </form>
 
         <p className="mt-8 text-sm text-gray-600 leading-relaxed">
