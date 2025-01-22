@@ -12,7 +12,7 @@ export const AuthPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [activeRole, setActiveRole] = useState("admin"); 
+  const [activeRole, setActiveRole] = useState("admin");
 
   // Dummy credentials
   const dummyData = {
@@ -51,7 +51,7 @@ export const AuthPage = () => {
         navigate("/student/login");
         break;
       case "Teacher":
-          navigate("/teacher/teacherLogin");
+        navigate("/teacher/teacherLogin");
         break;
       case "sadmin":
         navigate("/sadmin/auth");
@@ -60,7 +60,6 @@ export const AuthPage = () => {
       default:
         navigate("/dashboard");
         break;
-      
     }
   };
 
