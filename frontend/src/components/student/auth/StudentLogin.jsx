@@ -106,6 +106,15 @@ export const StudentLogin = () => {
                 Sign in
               </button>
             </div>
+            <div mt-4 className="text-center">
+              <button
+                type="button"
+                onClick={() => navigate("/")}
+                className="font-medium text-blue-600 hover:text-blue-500"
+              >
+                Go to Home Page
+              </button>
+            </div>
           </form>
         </div>
       </div>
