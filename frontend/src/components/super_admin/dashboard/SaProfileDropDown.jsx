@@ -1,9 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { Settings, LogOut, User } from 'lucide-react';
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Settings, LogOut, User } from "lucide-react";
 
-export const SaProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick }) => {
+export const SaProfileDropdown = ({
+  imageUrl,
+  onSettingsClick,
+  onProfileClick,
+}) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -15,20 +19,20 @@ export const SaProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick })
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleItemClick = (callback) => {
-    if (typeof callback === 'function') {
+    if (typeof callback === "function") {
       setIsOpen(false);
       callback();
     }
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/sadmin/auth');
+    localStorage.removeItem("token");
+    navigate("/sadmin/auth");
   };
 
   return (
@@ -64,7 +68,7 @@ export const SaProfileDropdown = ({ imageUrl, onSettingsClick, onProfileClick })
               <Settings size={16} />
               Account Settings
             </button>
-            <button 
+            <button
               type="button"
               onClick={() => handleItemClick(handleLogout)}
               className="w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-50 flex items-center gap-2"
@@ -83,4 +87,4 @@ SaProfileDropdown.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   onSettingsClick: PropTypes.func.isRequired,
   onProfileClick: PropTypes.func.isRequired,
-};  
+};
