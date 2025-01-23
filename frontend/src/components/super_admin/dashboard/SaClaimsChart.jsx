@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,8 +8,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -26,21 +26,21 @@ const options = {
   maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'top',
-      align: 'end',
+      position: "top",
+      align: "end",
       labels: {
         boxWidth: 8,
         usePointStyle: true,
-        pointStyle: 'circle',
+        pointStyle: "circle",
         padding: 20,
-        color: '#64748b',
+        color: "#64748b",
       },
     },
     tooltip: {
-      backgroundColor: '#fff',
-      titleColor: '#1e293b',
-      bodyColor: '#64748b',
-      borderColor: '#e2e8f0',
+      backgroundColor: "#fff",
+      titleColor: "#1e293b",
+      bodyColor: "#64748b",
+      borderColor: "#e2e8f0",
       borderWidth: 1,
       padding: 12,
       displayColors: false,
@@ -50,11 +50,11 @@ const options = {
     y: {
       beginAtZero: true,
       grid: {
-        color: 'rgba(0, 0, 0, 0.04)',
+        color: "rgba(0, 0, 0, 0.04)",
         border: false,
       },
       ticks: {
-        color: '#64748b',
+        color: "#64748b",
         padding: 8,
         stepSize: 10,
       },
@@ -64,7 +64,7 @@ const options = {
         display: false,
       },
       ticks: {
-        color: '#64748b',
+        color: "#64748b",
         padding: 8,
       },
     },
@@ -83,22 +83,22 @@ const options = {
   },
 };
 
-const labels = ['2015', '2016', '2017', '2018', '2019', '2020'];
+const labels = ["2015", "2016", "2017", "2018", "2019", "2020"];
 
 const data = {
   labels,
   datasets: [
     {
-      label: 'Approved',
+      label: "Approved",
       data: [30, 35, 25, 45, 35, 40],
-      borderColor: '#22C55E',
-      backgroundColor: 'rgba(34, 197, 94, 0.1)',
+      borderColor: "#22C55E",
+      backgroundColor: "rgba(34, 197, 94, 0.1)",
     },
     {
-      label: 'Submitted',
+      label: "Submitted",
       data: [25, 30, 20, 40, 30, 35],
-      borderColor: '#3B82F6',
-      backgroundColor: 'rgba(59, 130, 246, 0.1)',
+      borderColor: "#3B82F6",
+      backgroundColor: "rgba(59, 130, 246, 0.1)",
     },
   ],
 };
@@ -107,7 +107,9 @@ export const SaClaimsChart = () => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold text-gray-800">Claims Over the Years</h2>
+        <h2 className="text-lg font-semibold text-gray-800">
+          Claims Over the Years
+        </h2>
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <span className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-blue-500"></span>
