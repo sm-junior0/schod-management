@@ -40,6 +40,7 @@ import { SaHeader } from "./components/super_admin/dashboard/SaHeader";
 import { SaStatsCard } from "./components/super_admin/dashboard/SaStatsCard";
 import { SaSchoolsTable } from "./components/super_admin/dashboard/SaSchoolsTable";
 import { SaSchoolsStats } from "./components/super_admin/dashboard/SaSchoolsStats";
+import SchoolsList from "./components/super_admin/pages/SchoolsList";
 import { SaProfileDropdown } from "./components/super_admin/dashboard/SaProfileDropDown";
 import { SaProfilePage } from "./components/super_admin/profile/SaProfilePage";
 import { SaAccountSettings } from './components/super_admin/settings/SaAccountSettings';
@@ -262,6 +263,15 @@ const App = () => {
               </SaProtectedRoute>
             }
           />
+          <Route
+          path="sadmin/dashboard/schools"
+          element={
+             <SaProtectedRoute>
+              <SaDashboardLayout>
+                <SchoolsList />
+              </SaDashboardLayout>
+             </SaProtectedRoute>            
+          }/>
         </Route>
 
         <Route

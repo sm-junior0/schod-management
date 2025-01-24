@@ -25,7 +25,7 @@ const navItems = [
     path: '/teacher/classes'
   },
   {
-    icon: <Calendar size={20} />,
+    icon: <MessageSquare size={20} />,
     label: 'Appeals',
     path: '/teacher/appeals'
   },
@@ -33,11 +33,6 @@ const navItems = [
     icon: <TrendingUp size={20} />,
     label: 'Performance',
     path: '/teacher/performance'
-  },
-  {
-    icon: <MessageSquare size={20} />,
-    label: 'Appeals',
-    path: '/teacher/appeals'
   },
   {
     icon: <Bell size={20} />,

@@ -104,7 +104,7 @@ export const AuthPage = () => {
               name="studentCode"
               value={formData.studentCode}
               onChange={handleChange}
-              placeholder="School Student Code"
+              placeholder="Admin username"
               className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
             />

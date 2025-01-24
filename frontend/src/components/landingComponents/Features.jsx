@@ -62,7 +62,7 @@ const features = [
 
 export const Features = () => {
     return (
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="md:pr-12">
             <h2 className="text-3xl font-bold mb-6 text-center md:text-left mx-10">Features Of Our Software</h2>
