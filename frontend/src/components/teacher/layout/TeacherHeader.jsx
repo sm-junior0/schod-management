@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Bell } from 'lucide-react';
+import TProfileDropDown from '../dashboard/TProfileDropDown'; // Import the dropdown component
 
 export const TeacherHeader = () => (
   <div className="flex items-center justify-between p-4 border-b bg-white">
@@ -12,15 +13,11 @@ export const TeacherHeader = () => (
       />
     </div>
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 relative">
       <button className="p-2 rounded-lg hover:bg-gray-100">
         <Bell size={20} className="text-gray-600" />
       </button>
-      <img
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=faces"
-        alt="Profile"
-        className="w-8 h-8 rounded-full"
-      />
+      <TProfileDropDown /> {/* Add the profile dropdown here */}
     </div>
   </div>
 );

@@ -65,7 +65,8 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
         <SidebarItem 
           icon={<School size={20} />} 
           label="Schools" 
-          onClick={() => navigate('/dashboard/schools')} 
+          onClick={() => navigate('/dashboard')} 
+          // navigate('/dashboard/schools')}
         />  
         <SidebarItem 
           icon={<Users size={20} />} 
@@ -82,13 +83,15 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
           </div>
           <div 
             className="text-white/70 hover:bg-white/5 py-2 px-4 rounded-lg cursor-pointer text-sm"
-            onClick={() => navigate('/dashboard/students/admission')}
+            onClick={() => navigate('/students')}
+            // navigate('/dashboard/students/admission')}
           >
             Admission Form
           </div>
           <div 
             className="text-white/70 hover:bg-white/5 py-2 px-4 rounded-lg cursor-pointer text-sm"
-            onClick={() => navigate('/dashboard/students/promotion')}
+            onClick={() => navigate('/students')}
+            // navigate('/dashboard/students/promotion')}
           >
             Student Promotion
           </div>
@@ -138,7 +141,8 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
         <SidebarItem 
           icon={<CreditCard size={20} />} 
           label="Payment" 
-          onClick={() => navigate('/dashboard/payment')} 
+          onClick={() => navigate('/dashboard')} 
+          // navigate('/dashboard/payment')} 
         />
         <SidebarItem 
           icon={<BookOpen size={20} />} 
@@ -153,7 +157,7 @@ const Sidebar = ({ onLogoClick = () => {} }) => {
         <SidebarItem 
           icon={<Settings size={20} />} 
           label="Settings" 
-          onClick={() => navigate('/dashboard/settings')} 
+          onClick={() => navigate('/settings')} 
         />
       </nav>
 
