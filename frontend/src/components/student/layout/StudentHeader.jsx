@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search, Bell } from 'lucide-react';
-import SProfileDropDown from '../dashboard/SProfileDropdown'; // Import the student dropdown component
+import SProfileDropDown from '../dashboard/SProfileDropdown';
 
 export const StudentHeader = () => (
   <div className="flex items-center justify-between p-4 border-b bg-white">
@@ -17,7 +17,7 @@ export const StudentHeader = () => (
       <button className="p-2 rounded-lg hover:bg-gray-100">
         <Bell size={20} className="text-gray-600" />
       </button>
-      <SProfileDropDown /> {/* Add the student profile dropdown here */}
+      <SProfileDropDown /> 
     </div>
   </div>
 );
