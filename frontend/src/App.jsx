@@ -42,7 +42,7 @@ import { SaSchoolsTable } from "./components/super_admin/dashboard/SaSchoolsTabl
 import { SaSchoolsStats } from "./components/super_admin/dashboard/SaSchoolsStats";
 import { SaProfileDropdown } from "./components/super_admin/dashboard/SaProfileDropDown";
 import { SaProfilePage } from "./components/super_admin/profile/SaProfilePage";
-import { SaAccountSettings } from "./components/super_admin/settings/SaAccountSettings";
+import { SaAccountSettings } from './components/super_admin/settings/SaAccountSettings';
 import { TeacherLogin } from "./components/teacher/auth/TeacherLogin";
 import { TeacherSidebar } from "./components/teacher/layout/TeacherSidebar";
 import { AppealsTeacher } from "./components/teacher/pages/AppealsTeacher";
@@ -248,7 +248,9 @@ const App = () => {
             path="sadmin/settings"
             element={
               <SaProtectedRoute>
+                <SaDashboardLayout>
                 <SaSettingsWrapper />
+                </SaDashboardLayout>
               </SaProtectedRoute>
             }
           />
